@@ -57,11 +57,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Test heading</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique illum labore aut? Itaque sequi velit iure id perferendis! Asperiores inventore nam ad culpa tenetur rem itaque. Aliquam sequi, quis officiis cum alias praesentium nisi, perspiciatis provident qui aliquid similique natus earum eum tempore in eligendi nihil dolorem! Quibusdam, perspiciatis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique illum labore aut? Itaque sequi velit iure id perferendis! Asperiores inventore nam ad culpa tenetur rem itaque. Aliquam sequi, quis officiis cum alias praesentium nisi, perspiciatis provident qui aliquid similique natus earum eum tempore in eligendi nihil dolorem! Quibusdam, perspiciatis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique illum labore aut? Itaque sequi velit iure id perferendis! Asperiores inventore nam ad culpa tenetur rem itaque. Aliquam sequi, quis officiis cum alias praesentium nisi, perspiciatis provident qui aliquid similique natus earum eum tempore in eligendi nihil dolorem! Quibusdam, perspiciatis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique illum labore aut? Itaque sequi velit iure id perferendis! Asperiores inventore nam ad culpa tenetur rem itaque. Aliquam sequi, quis officiis cum alias praesentium nisi, perspiciatis provident qui aliquid similique natus earum eum tempore in eligendi nihil dolorem! Quibusdam, perspiciatis.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
