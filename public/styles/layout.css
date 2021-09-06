@@ -22,27 +22,6 @@ body {
   font-weight: 300;
 }
 
-nav {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  left: 0;
-  background-color: rgb(150, 166, 220);
-  border-bottom: 1px solid black;;
-}
-
-nav #logo {
-  font-family: 'Bungee';
-  height: 100%;
-}
-
-.nav-inner-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  color: white;
-}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
