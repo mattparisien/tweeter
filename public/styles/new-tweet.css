@@ -1,0 +1,24 @@
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet form label {
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.tweet-form-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.tweet-form-controls button {
+  font-family: 'Bungee';
+  background-color: #4056A1;
+  color: white;
+  padding: 10px 20px;
+}
+
