@@ -4,9 +4,19 @@
 }
 
 .new-tweet form label {
-  border-bottom: 4px solid black;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+
+.new-tweet form textarea {
+  border: 0px;
+  border-bottom: 3px solid black;
+  background: transparent;
+  line-height: 12px;
+}
+
+.new-tweet form textarea:focus {
+  outline: none;
 }
 
 .tweet-form-controls {
@@ -19,6 +29,6 @@
   font-family: 'Bungee';
   background-color: #4056A1;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
