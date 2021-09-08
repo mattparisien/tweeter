@@ -1,3 +1,4 @@
+
 header .profile-img-container{
   height: 400px;
   width: 100%;
@@ -7,7 +8,6 @@ header .profile-img-container{
   background-color: rgb(151, 201, 206);
   
   background-image: url(/images/asfalt-dark.png);
-  
 }
 
 header h2 {

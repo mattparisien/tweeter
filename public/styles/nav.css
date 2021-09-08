@@ -8,6 +8,8 @@ nav {
   background-color: #4056A1;
   border-bottom: 1px solid black;
   padding: 0 1.5em;
+  box-sizing: border-box;
+  z-index: 0;
 }
 
 nav #logo {

@@ -12,7 +12,6 @@
   border: 0px;
   border-bottom: 3px solid black;
   background: transparent;
-  line-height: 12px;
 }
 
 .new-tweet form textarea:focus {
@@ -23,10 +22,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  font-family: 'Bungee';
 }
 
 .tweet-form-controls button {
-  font-family: 'Bungee';
   background-color: #4056A1;
   color: white;
   padding: 5px 10px;
