@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $("#tweet-text").on("keyup", function () {
+  $("#tweet-text").on("input", function () {
     let maxCharNum = 140;
     let counter = $($(this).next()[0]).children("#counter")[0];
     const charCount = this.value.length;
