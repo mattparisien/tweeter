@@ -1,0 +1,10 @@
+/* Global Styles */
+
+:root, body {
+  --mainColor: rgb(128, 128, 220);
+  --hoverColor: rgb(55, 81, 138); 
+}
+
+button:hover {
+  background-color: var(--hoverColor) !important;
+}
