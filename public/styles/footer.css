@@ -1,0 +1,10 @@
+footer {
+  height: 120px;
+  background-color: red;
+  padding: 0 1em;
+  margin-top: 40px;
+}
+
+footer h3 {
+  display: inline-block;
+}
