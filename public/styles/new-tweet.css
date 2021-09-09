@@ -1,3 +1,9 @@
+#new-tweet {
+  border-radius: 10px;
+  box-shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
+  padding: 40px ;
+}
+
 .new-tweet form {
   display: flex;
   flex-direction: column;
@@ -12,6 +18,8 @@
   border: 0px;
   border-bottom: 3px solid black;
   background: transparent;
+  line-height: 35px;
+  resize: none;
 }
 
 .new-tweet form textarea:focus {
@@ -21,14 +29,17 @@
 .tweet-form-controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: 'Bungee';
 }
 
 .tweet-form-controls button {
-  background-color: #4056A1;
+  background-color: var(--mainColor);
   color: white;
   padding: 5px 10px;
+  border-radius: 10px;
+  border: 0px;
+  transition: 300ms ease;
 }
 
 .charLimitExceeded {

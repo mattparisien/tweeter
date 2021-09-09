@@ -1,14 +1,13 @@
 nav {
   height: 120px;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  background-color: #4056a1;
-  border-bottom: 1px solid black;
   padding: 0 1.5em;
   box-sizing: border-box;
   z-index: 0;
+  transition: 300ms ease;
 }
 
 .link-logo {
@@ -50,6 +49,13 @@ nav #logo {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
+
+.isScrolled {
+  background-color: var(--mainColor);
+  transition: 300ms ease;
+  border-bottom: 1px solid black;
+}
+
 
 @keyframes fadeArrows {
   0% {
