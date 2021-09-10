@@ -68,12 +68,26 @@ $(document).ready(function () {
     return $tweetTemplate;
   };
 
+  /**
+   *
+   * @param {*} tweets An array of objects containing tweet data.
+   */
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
       $(".display-tweets-container").append(newTweet);
     });
   };
+
+  $("#compose-form").submit(function (e) {
+
+    e.preventDefault();
+    const $formData = $(this).serialize();
+
+    $.post("/tweets/", $formData, function (data, status) {
+      console.log(status);
+    });
+  });
 
   renderTweets(data);
 });
