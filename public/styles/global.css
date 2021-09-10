@@ -2,10 +2,21 @@
 
 :root, body {
   --cream: #f4f1ec;
-  --mainColor: rgb(227, 147, 97);
+  --mainColor: rgb(121, 184, 223);
   --hoverColor: rgb(111, 138, 196); 
 }
 
-button:hover {
-  background-color: var(--hoverColor) !important;
+/* Hide body by default - fadeIn on page load */
+body {
+  display: none;
+}
+
+h1, h2, h3 {
+  letter-spacing: -1px;
+}
+
+
+button:hover .label{
+  color: var(--cream);
+
 }
