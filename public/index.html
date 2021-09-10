@@ -27,6 +27,11 @@
       rel="stylesheet"
     />
 
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -37,12 +42,13 @@
     />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/global.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/global.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/display-tweets.css" type="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,6 +58,7 @@
 
     <!-- Custom Features JS -->
     <script type="text/javascript" src="/scripts/nav-scrolled.js"></script>
+    <script type="text/javascript" src="/scripts/button-animations.js"></script>
 
     <!-- Tweet Character Counter JS -->
     <script src="scripts/composer-char-counter.js"></script>
@@ -62,7 +69,7 @@
     <nav>
       <div class="nav-inner-container">
         <a href="/" class="link-logo">
-          <span id="logo">tweeter</span>
+          <span id="logo">Tweeter <div class="rotate">*</div></span>
         </a>
         
         <div class="nav-right">
@@ -90,24 +97,34 @@
     <main class="container">
       <section class="new-tweet" id="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/">
+        <form action="/tweets/" id="compose-form">
           <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
           <div class="tweet-form-controls">
-            <button type="submit" id="submit">Tweet</button>
+            <button type="submit" id="submit">
+              <div class="label">Tweet</div>
+              <span class="circle">
+              </span>
+            </button>
             <output name="counter" class="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="display-tweets">
+        <h1>hey</h1>
       </section>
     </main>
 
     <!-- Global Footer -->
     <footer>
-      <div class="footer-image">
-        <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--mainColor)" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,250.7C240,245,300,235,360,192C420,149,480,75,540,74.7C600,75,660,149,720,149.3C780,149,840,75,900,48C960,21,1020,43,1080,69.3C1140,96,1200,128,1260,122.7C1320,117,1380,75,1410,53.3L1440,32L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-      </div>
-      <div class="footer-textContent">
+      
         <h3>Tweeter</h3>
-      </div>      
+      
+      <div class="footer-floating-circle"></div>
+      
+      <div class="footer-credits">
+        <p class="copyright-info">© 2021 The Afterglo Company Inc.</p>
+        <div class="design-credits"></div>
+      </div>
     </footer>
   </body>
 </html>
