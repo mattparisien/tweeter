@@ -35,7 +35,7 @@
 
 .tweet-form-controls button {
   color: var(--mainColor);
-  padding:7px 30px;
+  padding:3px 30px;
   border-radius: 40px;
   border: 0.5px solid var(--mainColor);
   transition: 300ms ease;
@@ -45,7 +45,9 @@
 }
 
 .tweet-form-controls button .label {
-  z-index: 1;
+  position: sticky;
+  transition: 300ms ease;
+  z-index: 3;
 }
 
 .tweet-form-controls button .circle {
@@ -56,7 +58,8 @@
   right: 0;
   background-color: var(--mainColor);
   border-radius: 50%;
-  z-index: 0;
+  z-index: 1;
+  display: block;
 }
 
 .circleIn {
@@ -65,12 +68,14 @@
 }
 
 .circleOut {
-  animation: out 2s ease;
+  animation: out 500ms ease;
   animation-fill-mode: forwards;
 }
 
 .tweet-form-controls #counter {
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
 .charLimitExceeded {
@@ -92,8 +97,6 @@
 @keyframes out {
   0% {
     transform: scale(5)
-  } 75% {
-    transform: scale(1.5)
   } 100% {
     transform: scale(1);
   }
