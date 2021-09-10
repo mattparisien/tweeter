@@ -29,7 +29,7 @@ $(document).ready(function () {
           </header>
           <p class="tweet"> ${data.content.text} </p>
           <footer class="tweet-details">
-            <p> <time class="need_to_be_rendered" id="timestamp" datetime="${data.created_at}"></time></p>
+            <p> ${timeago.format(data.created_at)}</p>
             <ul>
               <li>
                 <a href="#">
@@ -50,7 +50,6 @@ $(document).ready(function () {
           </footer>
     </article>
     `;
-
     return $tweetTemplate;
   };
 
