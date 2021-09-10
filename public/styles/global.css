@@ -1,8 +1,9 @@
 /* Global Styles */
 
 :root, body {
-  --mainColor: rgb(128, 128, 220);
-  --hoverColor: rgb(55, 81, 138); 
+  --cream: #f4f1ec;
+  --mainColor: rgb(227, 147, 97);
+  --hoverColor: rgb(111, 138, 196); 
 }
 
 button:hover {

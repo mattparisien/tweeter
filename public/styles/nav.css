@@ -15,8 +15,11 @@ nav {
   color: white;
 }
 
+
+
 nav #logo {
   font-family: "Bungee";
+  font-size: 1.5em;
 }
 
 .nav-inner-container {

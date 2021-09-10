@@ -1,16 +1,18 @@
 $(document).ready(() => {
-  $("#tweet-text").on("input", function () {
-    let maxCharNum = 140;
-    let counter = $($(this).next()[0]).children("#counter")[0];
-    const charCount = this.value.length;
-    maxCharNum = maxCharNum - charCount;
+  $("#tweet-text").on("input", function (e) {
 
-    if (maxCharNum < 0) {
-      $(counter).addClass('charLimitExceeded');
+    let dynamicCount = 140;
+    let counter = $($(this).next()[0]).children("#counter")[0];
+    const charsTyped = this.value.length;
+
+    dynamicCount = dynamicCount - charsTyped;
+    if (dynamicCount < 0) {
+      $(counter).addClass("charLimitExceeded");
     } else {
-      $(counter).removeClass('charLimitExceeded');
+      $(counter).removeClass("charLimitExceeded");
     }
 
-    $(counter).html(maxCharNum.toString());
+    $(counter).html(dynamicCount.toString());
   });
+  
 });
