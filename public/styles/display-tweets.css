@@ -1,0 +1,25 @@
+.display-tweets-container {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.tweet-item {
+  border: 1px solid black;
+  height: 200px;
+  padding: 15px;
+}
+
+.tweet-item .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-item .header-left {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-item .tweet {
+  text-align: center;
+}
