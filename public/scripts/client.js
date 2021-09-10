@@ -11,6 +11,12 @@ $(document).ready(function () {
     created_at: 1461116232227,
   };
 
+  /**
+   * 
+   * @param {*} data An object containing user and content data about a new tweet post
+   * @returns HTML markup for displaying a new tweet
+   */
+
   const createTweetElement = function (data) {
     const $tweetTemplate = `
     <article class="tweet-item">
@@ -42,12 +48,13 @@ $(document).ready(function () {
               </li>
             </ul>
           </footer>
-        </article>
+    </article>
     `;
 
     return $tweetTemplate;
   };
 
   const $tweet = createTweetElement(tweetData);
-  console.log($tweet);
+  $('.display-tweets-container').append($tweet);
+
 });
