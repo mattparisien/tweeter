@@ -1,20 +1,25 @@
-$(document).ready(function () {
-  const form = $('#new-tweet form')[0];
-  $(form).submit(function(e) {
-    e.preventDefault();
-    const tweet = $('#tweet-text').val();
+$(document).ready(function() {
 
-    $.post({
-      url: '/tweets/',
-      data: tweet,
-      success: 'success',
-      dataType: 'JSON'
-    }).done(function(data) {
-      console.log(data)
-    }) 
+  const tweetData = {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+        "handle": "@SirIsaac"
+      },
+    "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+    "created_at": 1461116232227
+ }
 
-  })
+  const createTweetElement = function(data) {
 
-  
+    const $tweet = $(`<article class="tweet-item">${data}</article>`);
+    return $tweet
+  }
 
-})  
+  const $tweet = createTweetElement(tweetData)
+
+
+
+})
