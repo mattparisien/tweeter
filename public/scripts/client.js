@@ -73,6 +73,12 @@ $(document).ready(function () {
     })
   }
 
+  //Initially load tweets
   loadTweets();
+
+  //Reload tweets every time a user submits a tweet
+  $('#submit').on('click', function() {
+    loadTweets();
+  })
   
 });
