@@ -70,6 +70,7 @@ $(document).ready(function () {
   const loadTweets = function() {
     $.get('/tweets/', function(data) {
       renderTweets(data);
+      $($('#compose-form')[0]).trigger('reset')
     })
   }
 
@@ -77,8 +78,7 @@ $(document).ready(function () {
   loadTweets();
 
   //Reload tweets every time a user submits a tweet
-  $('#submit').on('click', function() {
+  $('#submit').on('click', function(e) {
     loadTweets();
   })
-  
 });
