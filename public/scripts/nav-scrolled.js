@@ -1,5 +1,7 @@
 $(document).ready(() => {
 
+  $('body').fadeIn('slow')
+
   $(window).on('scroll', function() {
 
     if ($($(this)[0]).scrollTop() >= 54) {
