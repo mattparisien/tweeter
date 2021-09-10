@@ -4,9 +4,8 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0 1.5em;
   box-sizing: border-box;
-  z-index: 0;
+  z-index: 999;
   transition: 300ms ease;
 }
 
@@ -15,18 +14,32 @@ nav {
   color: white;
 }
 
-
-
 nav #logo {
-  font-family: "Bungee";
-  font-size: 1.5em;
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 2em;
+}
+
+
+
+nav .link-logo .rotate {
+  text-align: center;
+  display: inline-block;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  animation: rotate 2s infinite linear;
+  width: 25px;
+  height: 25px;
 }
 
 .nav-inner-container {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   color: white;
   padding: 0;
 }
@@ -44,7 +57,7 @@ nav #logo {
 
 .nav-right a {
   align-self: center;
-  color: rgb(124, 189, 124);
+  color: var(--cream);
 }
 
 .nav-right a i {
@@ -54,11 +67,20 @@ nav #logo {
 }
 
 .isScrolled {
+  padding: 0 1em;
   background-color: var(--mainColor);
   transition: 300ms ease;
   border-bottom: 1px solid black;
 }
 
+.isScrolled .nav-inner-container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.isScrolled .nav-inner-container #logo {
+  font-size: 1.5em;
+}
 
 @keyframes fadeArrows {
   0% {
@@ -66,5 +88,32 @@ nav #logo {
   }
   100% {
     opacity: 0.9;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
