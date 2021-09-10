@@ -4,9 +4,13 @@
 }
 
 .tweet-item {
-  border: 1px solid black;
-  height: 200px;
+  height: 250px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
 }
 
 .tweet-item .user-info {
@@ -22,4 +26,37 @@
 
 .tweet-item .tweet {
   text-align: center;
+  border-radius: 10px;
+}
+
+.tweet-details {
+  border-top: 3px solid var(--offBlack);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tweet-details p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.tweet-details ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.tweet-details ul a {
+  text-decoration: none;
+  color: var(--offBlack);
+  transition: 300ms ease;
+}
+
+.tweet-details ul a:hover {
+  color: var(--mainColor);
+  
+}
+
+.tweet-details ul li {
+  display: inline;
 }
