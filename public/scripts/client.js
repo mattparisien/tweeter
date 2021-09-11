@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
@@ -57,7 +56,6 @@ $(document).ready(function () {
 
   //Submit form data via ajax post request
   $("#compose-form").submit(function (e) {
-
     e.preventDefault();
     const $formData = $(this).serialize();
 
@@ -67,18 +65,20 @@ $(document).ready(function () {
   });
 
   //Load tweets from server
-  const loadTweets = function() {
-    $.get('/tweets/', function(data) {
+  const loadTweets = function () {
+    $.get("/tweets/", function (data) {
       renderTweets(data);
-      $($('#compose-form')[0]).trigger('reset')
-    })
-  }
+      $("#compose-form textarea").val("");
+      const $output =  $($("#compose-form textarea").next()[0]).find('output')[0];
+      $($output).val("140");
+    });
+  };
 
   //Initially load tweets
   loadTweets();
 
   //Reload tweets every time a user submits a tweet
-  $('#submit').on('click', function(e) {
+  $("#submit").on("click", function (e) {
     loadTweets();
-  })
+  });
 });
