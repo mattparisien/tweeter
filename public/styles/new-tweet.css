@@ -2,6 +2,7 @@
   border-radius: 10px;
   box-shadow: var(--shadow);
   padding: 2em;
+  display: none;
 }
 
 .new-tweet form {
@@ -28,9 +29,14 @@
 
 #compose-form .form-error {
   font-size: 15px;
-  color: red;
+  color: var(--red);
   margin-top: 1em;
   font-weight: 600;
+  display: none;
+}
+
+.invalid-field {
+  border-bottom: 3px solid var(--red) !important;
 }
 
 .tweet-form-controls {
@@ -86,7 +92,7 @@
 }
 
 .charLimitExceeded {
-  color: red;
+  color: var(--red);
 }
 
 /* Tranform button circle in */
