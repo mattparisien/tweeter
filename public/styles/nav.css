@@ -43,10 +43,12 @@ nav .link-logo .rotate {
 }
 
 .nav-right {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .nav-right h5 {
@@ -54,14 +56,20 @@ nav .link-logo .rotate {
 }
 
 .nav-right a {
+  animation: bounceArrow 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
   align-self: center;
   color: var(--cream);
 }
 
 .nav-right a i {
-  animation: fadeArrows 1s ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  transition: 300ms ease;
+}
+
+.nav-right a:hover i {
+  color: var(--mainColor);
+  transition: 300ms ease;
 }
 
 .isScrolled {
@@ -71,16 +79,21 @@ nav .link-logo .rotate {
 }
 
 .isScrolled .nav-inner-container,
-.isScrolled .link-logo span {
+.isScrolled .link-logo span,
+.isScrolled .nav-right a i {
   color: var(--mainColor);
 }
 
-@keyframes fadeArrows {
+.isScrolled .nav-right a:hover i {
+  color: var(--hoverColor);
+}
+
+@keyframes bounceArrow {
   0% {
-    opacity: 0;
+    transform: translateY(0)
   }
   100% {
-    opacity: 0.9;
+    transform: translateY(10px);
   }
 }
 
