@@ -1,18 +1,25 @@
 //Button Animations File
 
-//Nav arrow link: On click event triggers a smooth scroll to tweet form
-$(document).ready(function () {
-  const $link = $("#scroll-to-form");
+// Helper function: scrolls to tweet form while taking nav offset into consideration
+/**
+ * 
+ * @param {*} button Button linking to form 
+ */
+const scrollToForm = function(button) {
 
-  $($link).on("click", function (e) {
+  $(button).on("click", function (e) {
     e.preventDefault();
     $("html, body").animate(
       {
         scrollTop: $("#compose-form").offset().top - 300, //Offset top by 300px to prevent nav covering form
-      },
-      1500
-    );
+      }, 1500);
   });
+}
+
+//Nav arrow link: On click event triggers a smooth scroll to tweet form
+$(document).ready(function () {
+  const $button = $("#scroll-to-form");
+  scrollToForm($button);
 });
 
 //Adds and removes classes to form submit button to animate its circle
@@ -33,7 +40,9 @@ $(document).ready(() => {
 
 //Reveal back to top button on scroll animation
 $(document).ready(function () {
-  const $backToTop = $(`<a id="backtotop" href="#">Back to Top</a>`).hide();
+  const $backToTop = $(`<a id="backtotop" href="#">Back to Tweeting!</a>`).hide();
+  scrollToForm($backToTop);
+
   $("body").append($backToTop);
 
   $(window).on("scroll", function () {
