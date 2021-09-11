@@ -90,12 +90,19 @@ $(document).ready(function () {
     const $textArea = $("#compose-form textarea");
 
     if (!$($textArea).val()) {
+      
       alert("Form fields cannot be empty.");
+      
     } else if ($($textArea).val().length > 140) {
+
       alert("Tweet has too many characters.");
-      return;
+
+    } else {
+
+      loadTweets();
+
     }
 
-    loadTweets();
+    
   });
 });
