@@ -106,7 +106,7 @@ $(document).ready(function () {
 
     if ($validatedForm.hasError) {
       e.preventDefault();
-      $($formError).text(`${$validatedForm.errorMsg}`).show();
+      $($formError).text(`${$validatedForm.errorMsg}`).slideDown();
       $($textArea).addClass("invalid-field");
 
       $("#submit").on("click", function () {
