@@ -1,4 +1,6 @@
 .display-tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
   width: 100%;
   /* border: 1px solid black; */
 }
@@ -9,8 +11,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: var(--shadow);
   border-radius: 10px;
+  transition: 300ms ease;
+  border: 1px solid var(--offBlack);
+  margin: 50px 0px;
+}
+
+.tweet-item:hover {
+  box-shadow: var(--shadow);
 }
 
 .tweet-item .user-info {
@@ -62,7 +70,6 @@
 
 .tweet-details ul a:hover {
   color: var(--mainColor);
-  
 }
 
 .tweet-details ul li {
