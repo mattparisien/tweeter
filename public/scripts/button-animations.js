@@ -5,9 +5,7 @@
  * 
  * @param {*} button Button linking to form 
  */
-const scrollToForm = function(button) {
-
-  $(button).on("click", function (e) {
+const scrollToForm = function(e) {
     e.preventDefault();
     $("#new-tweet").slideDown();
 
@@ -18,16 +16,19 @@ const scrollToForm = function(button) {
         }, 1500);
         $("#compose-form textarea").focus();
     }, 400);
-  });
 }
 
 //Nav arrow link: On click event triggers a smooth scroll to tweet form
 $(document).ready(function () {
   const $button = $("#scroll-to-form");
-  scrollToForm($button);
+  
+  $button.on("click", function(e) {
+    scrollToForm(e);
+  })
+
 });
 
-//Adds and removes classes to form submit button to animate its circle
+//Adds and removes classes to buttons to animate circle background on hover state
 $(document).ready(() => {
   const button = $("#submit");
   const circle = $("#submit .circle");
@@ -43,19 +44,33 @@ $(document).ready(() => {
   });
 });
 
-//Reveal back to top button on scroll animation
+//Reveal back to top button on scroll animation + hide nav link
 $(document).ready(function () {
-  const $backToTop = $(`<a id="backtotop" href="#">Back to Tweeting!</a>`).hide();
+  const $backToTop = $(`<a class="backtotop" href="#">Back to Tweeting!</a>`).hide();
+  const $navLink = $(".nav-right");
   
-
   $("body").append($backToTop);
-  scrollToForm($backToTop);
+  
+  $backToTop.on("click", function(e) {
+
+    scrollToForm(e)
+
+
+  })
 
   $(window).on("scroll", function () {
+    
     if ($(this).scrollTop() >= 1200) {
       $($backToTop).fadeIn(200);
-    } else if ($(this).scrollTop() <= 1200) {
+    } else {
       $($backToTop).fadeOut(200);
     }
+
+    if ($backToTop.is(":visible")) {
+      $($navLink).fadeOut(200);
+    } else {
+      $($navLink).fadeIn(200);
+    }
+
   });
 });
