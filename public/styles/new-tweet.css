@@ -1,7 +1,7 @@
 #new-tweet {
   border-radius: 10px;
-  box-shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
-  padding: 40px ;
+  box-shadow: var(--shadow);
+  padding: 2em;
 }
 
 .new-tweet form {
@@ -16,7 +16,7 @@
 
 .new-tweet form textarea {
   border: 0px;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--offBlack);
   background: transparent;
   line-height: 35px;
   resize: none;
@@ -26,10 +26,17 @@
   outline: none;
 }
 
+#compose-form .form-error {
+  font-size: 15px;
+  color: red;
+  margin-top: 1em;
+  font-weight: 600;
+}
+
 .tweet-form-controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 1em;
   font-family: 'Poppins';
 }
 
@@ -82,7 +89,7 @@
   color: red;
 }
 
-/* Tranform button circle */
+/* Tranform button circle in */
 
 @keyframes in {
   0% {
