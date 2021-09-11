@@ -50,7 +50,7 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
-      $(".display-tweets-container").append(newTweet);
+      $(".display-tweets-container").prepend(newTweet);
     });
   };
 
