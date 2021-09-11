@@ -64,13 +64,21 @@ $(document).ready(function () {
     });
   });
 
+  //Reset form elements helper function
+
+  const resetForm = function () {
+    const $textArea = $("#compose-form textarea");
+    const $counter = $("#compose-form").find("#counter");
+
+    $($textArea).val("");
+    $($counter).val("140");
+  };
+
   //Load tweets from server
   const loadTweets = function () {
     $.get("/tweets/", function (data) {
       renderTweets(data);
-      $("#compose-form textarea").val("");
-      const $output =  $($("#compose-form textarea").next()[0]).find('output')[0];
-      $($output).val("140");
+      resetForm();
     });
   };
 
@@ -79,6 +87,15 @@ $(document).ready(function () {
 
   //Reload tweets every time a user submits a tweet
   $("#submit").on("click", function (e) {
+    const $textArea = $("#compose-form textarea");
+
+    if (!$($textArea).val()) {
+      alert("Form fields cannot be empty.");
+    } else if ($($textArea).val().length > 140) {
+      alert("Tweet has too many characters.");
+      return;
+    }
+
     loadTweets();
   });
 });
