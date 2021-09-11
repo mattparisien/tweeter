@@ -4,6 +4,7 @@
   --cream: #f4f1ec;
   --mainColor: rgb(121, 184, 223);
   --hoverColor: rgb(111, 138, 196); 
+  --red: #f04141;
   --offBlack: #545149;
   --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
 }
@@ -11,10 +12,15 @@
 /* Hide body by default - fadeIn on page load */
 body {
   display: none;
+  overflow-y: hidden;
 }
 
 h1, h2, h3 {
   letter-spacing: -1px;
+}
+
+section {
+  margin-top: 3em;
 }
 
 button:hover .label{
