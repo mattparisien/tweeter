@@ -1,8 +1,8 @@
 /* Global Styles */
 
 :root, body {
-  --cream: #f4f1ec;
-  --mainColor: rgb(121, 184, 223);
+  --cream: hsl(37, 27%, 94%);
+  --mainColor: #7768ca;
   --hoverColor: rgb(111, 138, 196); 
   --red: #f04141;
   --offBlack: #545149;
@@ -12,7 +12,7 @@
 /* Hide body by default - fadeIn on page load */
 body {
   display: none;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -25,4 +25,31 @@ section {
 
 button:hover .label{
   color: var(--cream);
+}
+
+#backtotop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  text-decoration: none;
+  padding: 1em;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  height: 80px;
+  width: 80px;
+  margin: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainColor);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#backtotop:hover {
+  background-color: var(--hoverColor);
+  color: var(--mainColor);
 }
