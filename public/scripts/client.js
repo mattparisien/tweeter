@@ -63,7 +63,11 @@ $(document).ready(function () {
   });
 
   //Helper function respomsible for validating tweet form field
-
+  /**
+   * 
+   * @param {*} formField The form's textarea or input field 
+   * @returns An object specifying whether the form contains an error, and an error message specifying the error message to be declared
+   */
   const validateForm = function (formField) {
     if (!$(formField).val()) {
       return { hasError: true, errorMsg: "Form fields cannot be empty." };
@@ -113,10 +117,7 @@ $(document).ready(function () {
         }
       });
     } else {
-
       loadTweets();
-      
     }
-    
   });
 });
