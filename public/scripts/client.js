@@ -59,13 +59,21 @@ $(document).ready(function () {
     e.preventDefault();
     const $formData = $(this).serialize();
 
-    $.post("/tweets/", $formData, function (data, status) {
-      console.log(data);
-    });
+    $.post("/tweets/", $formData, function (data, status) {});
   });
 
-  //Reset form elements helper function
+  //Helper function respomsible for validating tweet form field
 
+  const validateForm = function (formField) {
+    if (!$(formField).val()) {
+      return { hasError: true, errorMsg: "Form fields cannot be empty." };
+    } else if ($(formField).val().length > 140) {
+      return { hasError: true, errorMsg: "Tweet has too many characters." };
+    }
+    return { hasError: false, errorMsg: null };
+  };
+
+  //Helper function respomsible for reset of form elements
   const resetForm = function () {
     const $textArea = $("#compose-form textarea");
     const $counter = $("#compose-form").find("#counter");
@@ -74,9 +82,10 @@ $(document).ready(function () {
     $($counter).val("140");
   };
 
-  //Load tweets from server
+  //Function responsible for loading tweets from server
   const loadTweets = function () {
     $.get("/tweets/", function (data) {
+      console.log("in here!");
       renderTweets(data);
       resetForm();
     });
@@ -85,22 +94,29 @@ $(document).ready(function () {
   //Initially load tweets
   loadTweets();
 
-  //Reload tweets every time a user submits a tweet
+  //Event handler checks for form submissions errors, if none reload tweets
   $("#submit").on("click", function (e) {
-    const $textArea = $("#compose-form textarea");
-    const $formError = $("#compose-form .form-error")[0]
+    const $textArea = $("#tweet-text");
+    const $formError = $("#compose-form .form-error")[0];
+    let $validatedForm = validateForm($textArea);
 
-    if (!$($textArea).val()) {
+    if ($validatedForm.hasError) {
+      e.preventDefault();
+      $($formError).text(`${$validatedForm.errorMsg}`).show();
+      $($textArea).addClass("invalid-field");
+
+      $("#submit").on("click", function () {
+        $validatedForm = validateForm($textArea);
+        if (!$validatedForm.hasError) {
+          $($formError).hide();
+          $($textArea).removeClass("invalid-field");
+        }
+      });
+    } else {
+
+      loadTweets();
+      
+    }
     
-      e.preventDefault();
-      $($formError).text("Form fields cannot be empty.").show();
-
-    } else if ($($textArea).val().length > 140) {
-
-      $($formError).text("Tweet has too many characters.").show();
-      e.preventDefault();
-    } 
-
-    loadTweets();
   });
 });
