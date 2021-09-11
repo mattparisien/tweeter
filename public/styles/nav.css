@@ -17,10 +17,8 @@ nav {
 nav #logo {
   font-family: "Poppins";
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.5em;
 }
-
-
 
 nav .link-logo .rotate {
   text-align: center;
@@ -37,11 +35,11 @@ nav .link-logo .rotate {
 .nav-inner-container {
   height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  color: white;
+  justify-content: space-between;
+  color: var(--cream);
   padding: 0;
+  padding: 0 1em;
 }
 
 .nav-right {
@@ -67,19 +65,14 @@ nav .link-logo .rotate {
 }
 
 .isScrolled {
-  padding: 0 1em;
-  background-color: var(--mainColor);
+  background-color: var(--cream);
   transition: 300ms ease;
   border-bottom: 1px solid black;
 }
 
-.isScrolled .nav-inner-container {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.isScrolled .nav-inner-container #logo {
-  font-size: 1.5em;
+.isScrolled .nav-inner-container,
+.isScrolled .link-logo span {
+  color: var(--mainColor);
 }
 
 @keyframes fadeArrows {
@@ -110,6 +103,24 @@ nav .link-logo .rotate {
 }
 
 @-moz-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes rotate {
   from {
     transform: rotate(0deg);
   }
