@@ -88,18 +88,18 @@ $(document).ready(function () {
   //Reload tweets every time a user submits a tweet
   $("#submit").on("click", function (e) {
     const $textArea = $("#compose-form textarea");
+    const $formError = $("#compose-form .form-error")[0]
 
     if (!$($textArea).val()) {
-
+    
       e.preventDefault();
-      alert("Form fields cannot be empty.");
+      $($formError).text("Form fields cannot be empty.").show();
 
     } else if ($($textArea).val().length > 140) {
 
+      $($formError).text("Tweet has too many characters.").show();
       e.preventDefault();
-      alert("Tweet has too many characters.");
-      
-    }
+    } 
 
     loadTweets();
   });
