@@ -1,13 +1,36 @@
-header .profile-img-container{
+.global-header {
   height: 400px;
   width: 100%;
+  background-image: linear-gradient(to top left, #9b94c4, #f3b162,  #f3b1b2, #4aa0b1);;
+  background-size: 350%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: rgb(151, 201, 206);
-  background-image: url(/images/asfalt-dark.png);
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: animateHeaderBg 8s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
 
-header h2 {
+
+
+.global-header h1 {
   text-align: center;
+  margin: 0 2em;
+  color: var(--cream);
+  z-index: 1;
+}
+
+.global-header img {
+  z-index: 1;
+}
+
+#layer_1 {
+  width: 100%;
+}
+
+@keyframes animateHeaderBg {
+  0% { background-position: left; }
+  100% { background-position: right; }
 }
