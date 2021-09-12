@@ -1,16 +1,12 @@
 $(document).ready(() => {
+  
+  $("body, footer").fadeIn(200);
 
-  $('body').fadeIn('slow')
-
-  $(window).on('scroll', function() {
-
+  $(window).on("scroll", function () {
     if ($($(this)[0]).scrollTop() >= 54) {
-      $('body nav').addClass('isScrolled');
-      
+      $("body nav").addClass("isScrolled");
     } else {
-
-      $('body nav').removeClass('isScrolled');
-
+      $("body nav").removeClass("isScrolled");
     }
-  })
-})
+  });
+});
