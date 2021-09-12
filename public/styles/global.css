@@ -10,24 +10,39 @@
 }
 
 /* Hide body by default - fadeIn on page load */
-body {
-  display: none;
-  overflow-x: hidden;
-}
 
 h1, h2, h3 {
   letter-spacing: -1px;
 }
 
-section {
-  margin-top: 3em;
+h1 {
+  font-size: 1.5em;
+}
+
+/* Hide by default, reveal on load */
+body, footer {
+  display: none;
+}
+
+button {
+  padding: 3px 30px;
+  border-radius: 40px;
+  border: 0px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 button:hover .label{
   color: var(--cream);
 }
 
-#backtotop {
+.hidden {
+  display: none;
+}
+
+.backtotop {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,9 +62,14 @@ button:hover .label{
   position: fixed;
   bottom: 0;
   right: 0;
+  box-shadow: var(--shadow);
 }
 
 #backtotop:hover {
   background-color: var(--hoverColor);
   color: var(--cream);
+}
+
+input:focus, textarea:focus {
+  outline: none;
 }
