@@ -1,0 +1,30 @@
+.intro {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cream);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  font-family: "Bungee";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main);
+}
+
+.intro h1 {
+  overflow: hidden;
+}
+
+.intro h1 span {
+  display: block;
+  transform: translateY(50px);
+  animation: revealText 2s ease forwards;
+  
+}
+
+@keyframes revealText {
+  0% { transform: translateY(50) }
+  100% { transform: translateY(0) }
+}
