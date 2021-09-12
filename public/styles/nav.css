@@ -42,32 +42,28 @@ nav .link-logo .rotate {
   padding: 0 1em;
 }
 
-.nav-right {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
 
 .nav-right h5 {
   margin: 0;
 }
 
 .nav-right a {
-  animation: bounceArrow 1s ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  align-self: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: var(--cream);
-}
-
-.nav-right a i {
   transition: 300ms ease;
 }
 
-.nav-right a:hover i {
+.nav-right a i {
+  animation: bounceArrow 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.nav-right a:hover {
   color: var(--mainColor);
   transition: 300ms ease;
 }
@@ -80,7 +76,7 @@ nav .link-logo .rotate {
 
 .isScrolled .nav-inner-container,
 .isScrolled .link-logo span,
-.isScrolled .nav-right a i {
+.isScrolled .nav-right a {
   color: var(--mainColor);
 }
 
@@ -139,5 +135,16 @@ nav .link-logo .rotate {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: var(--cream);
+    border-bottom: 1px solid black;
+  }
+
+  nav h1, nav .nav-right a {
+    color: var(--mainColor);
   }
 }
