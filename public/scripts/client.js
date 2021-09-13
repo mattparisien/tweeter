@@ -10,9 +10,7 @@ $(document).ready(function () {
     <article class="tweet-item">
           <header class="user-info">
             <div class="header-left">
-              <img src="${
-                data.user.avatars
-              }" style="width: 60px; height: 60px;">
+              <img src="${data.user.avatars}" style="width: 60px; height: 60px;">
               <h4>${data.user.name}</h4>
             </div>
             <h4 class="handle">${data.user.handle}</h4>
@@ -50,14 +48,27 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
-      $(".display-tweets-container").prepend(newTweet);
+      $(".display-tweets-container").append(newTweet);
     });
   };
 
   //Submit form data via ajax post request
   $("#compose-form").submit(function (e) {
     e.preventDefault();
+    const $loader = $("#loader");
+
+
+    
     const $formData = $(this).serialize();
+    const $button = $(this).find("button")[0];
+
+    $("#loader").show();
+
+
+    if ($("#loader").is(":visible")) {
+      $($button).hide();
+    } 
+
 
     $.post("/tweets/", $formData, function (data, status) {});
   });
@@ -89,14 +100,17 @@ $(document).ready(function () {
   //Function responsible for loading tweets from server
   const loadTweets = function () {
     $.get("/tweets/", function (data) {
-      console.log("in here!");
       renderTweets(data);
       resetForm();
+      $("#loader").hide();
+      $("#submit").show();
     });
   };
 
   //Initially load tweets
   loadTweets();
+  $("body, footer").fadeIn(200);
+  
 
   //Event handler checks for form submissions errors, if none reload tweets
   $("#submit").on("click", function (e) {
@@ -105,18 +119,23 @@ $(document).ready(function () {
     let $validatedForm = validateForm($textArea);
 
     if ($validatedForm.hasError) {
+      console.log('error!')
       e.preventDefault();
       $($formError).text(`${$validatedForm.errorMsg}`).slideDown();
       $($textArea).addClass("invalid-field");
 
       $("#submit").on("click", function () {
+        console.log('error2')
         $validatedForm = validateForm($textArea);
         if (!$validatedForm.hasError) {
+          console.log('haserrro3')
           $($formError).hide();
           $($textArea).removeClass("invalid-field");
+          loadTweets();
         }
       });
     } else {
+
       loadTweets();
     }
   });
