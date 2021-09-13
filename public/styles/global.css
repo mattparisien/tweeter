@@ -3,13 +3,14 @@
 :root, body {
   --cream: hsl(37, 27%, 94%);
   --mainColor: #7768ca;
-  --hoverColor: rgb(111, 138, 196); 
+  --hoverColor: rgb(154, 171, 209); 
   --red: #f04141;
   --offBlack: #545149;
   --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
 }
 
 /* Hide body by default - fadeIn on page load */
+
 
 h1, h2, h3 {
   letter-spacing: -1px;
@@ -65,7 +66,7 @@ button:hover .label{
   box-shadow: var(--shadow);
 }
 
-#backtotop:hover {
+.backtotop:hover {
   background-color: var(--hoverColor);
   color: var(--cream);
 }
