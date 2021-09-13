@@ -1,5 +1,6 @@
 .global-footer {
-  height: 90vh;
+  height: 60vmax;
+  max-height: 600px;
   margin-top: 40px;
   color: var(--cream);
   position: relative;
@@ -16,18 +17,26 @@
   width: 90%;
   height: 50vmax;
   position: absolute;
-  bottom: 100px;
+   bottom: 0;
   left: 0;
   margin: 5vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
-#Layer_1 {
-  width: 200vmax;
+.waves-container {
+  height: 100%;
+  width: 250%;
+  position: absolute;
+  top: 0;
 }
+
+#Layer_1 {
+  width: 100%;
+}
+
 
 .global-footer h1 {
   margin: 0;
@@ -136,3 +145,4 @@
     transform: translateX(-50%);
   }
 }
+
