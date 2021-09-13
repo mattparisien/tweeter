@@ -31,6 +31,10 @@
   margin: 0;
 }
 
+.tweet-item .handle {
+  opacity: 0.5;
+}
+
 .tweet-item .header-left {
   display: flex;
   align-items: center;
