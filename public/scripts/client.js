@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$( () => {
   /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
@@ -55,10 +55,8 @@ $(document).ready(function () {
   //Submit form data via ajax post request
   $("#compose-form").submit(function (e) {
     e.preventDefault();
-    const $loader = $("#loader");
-
-
     
+    const $loader = $("#loader");
     const $formData = $(this).serialize();
     const $button = $(this).find("button")[0];
 
@@ -70,7 +68,9 @@ $(document).ready(function () {
     } 
 
 
-    $.post("/tweets/", $formData, function (data, status) {});
+    $.post("/tweets/", $formData, function (data, status) {
+      loadTweets();
+    });
   });
 
   //Helper function respomsible for validating tweet form field
@@ -128,7 +128,7 @@ $(document).ready(function () {
         console.log('error2')
         $validatedForm = validateForm($textArea);
         if (!$validatedForm.hasError) {
-          console.log('haserrro3')
+          
           $($formError).hide();
           $($textArea).removeClass("invalid-field");
           loadTweets();
