@@ -52,7 +52,7 @@ $( () => {
     });
   };
 
-  //Submit form data via ajax post request
+  //Submit form data via ajax post request --> get tweets once info has been successfully posted
   $("#compose-form").submit(function (e) {
     e.preventDefault();
     
