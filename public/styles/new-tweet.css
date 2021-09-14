@@ -2,6 +2,7 @@
   border-radius: 10px;
   box-shadow: var(--shadow);
   padding: 2em;
+  margin: 3em 0;
   display: none;
 }
 
@@ -43,7 +44,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1em;
-  font-family: 'Poppins';
 }
 
 .tweet-form-controls button {
@@ -55,6 +55,7 @@
   font-weight: 200;
   overflow: hidden;
   position: relative;
+  font-family: "Bungee";
 }
 
 .tweet-form-controls button .label {
@@ -101,7 +102,7 @@
   0% {
     transform: scale(1);
   } 100% {
-    transform: scale(5)
+    transform: scale(6)
   }
 }
 

@@ -14,7 +14,7 @@
 .global-footer .content {
   z-index: 1;
   position: sticky;
-  width: 90%;
+  width: 400px;
   height: 50vmax;
   position: absolute;
    bottom: 0;
@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  margin: auto;
 }
 
 .waves-container {
@@ -38,14 +39,13 @@
 }
 
 
-.global-footer h1 {
-  margin: 0;
-}
-
 
 .global-footer form {
   font-size: 20px;
+  
 }
+
+
 
 .global-footer form input {
   width: 300px;

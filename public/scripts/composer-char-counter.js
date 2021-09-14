@@ -1,8 +1,7 @@
-$(document).ready(() => {
+$( () => {
   $("#tweet-text").on("input", function (e) {
     let dynamicCount = 140;
     let counter = $(this).parent().find("#counter")[0];
-    console.log(counter)
     
     const charsTyped = this.value.length;
 
@@ -13,7 +12,7 @@ $(document).ready(() => {
       $(counter).removeClass("charLimitExceeded");
     }
 
-    $(counter).html(dynamicCount.toString());
+    $(counter).text(dynamicCount.toString());
   });
   
 });

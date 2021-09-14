@@ -5,19 +5,14 @@ nav {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  z-index: 999;
+  z-index: 998;
   transition: 300ms ease;
 }
 
 .link-logo {
   text-decoration: none;
   color: white;
-}
-
-nav #logo {
-  font-family: "Poppins";
-  font-weight: 900;
-  font-size: 1.5em;
+  font-family: "Bungee"
 }
 
 nav .link-logo .rotate {
@@ -80,7 +75,7 @@ nav .link-logo .rotate {
   color: var(--mainColor);
 }
 
-.isScrolled .nav-right a:hover i {
+.isScrolled .nav-right a:hover {
   color: var(--hoverColor);
 }
 

@@ -138,5 +138,22 @@ $( () => {
 
       loadTweets();
     }
+
+    if (!$($textArea).val()) {
+      
+      alert("Form fields cannot be empty.");
+      
+    } else if ($($textArea).val().length > 140) {
+
+      alert("Tweet has too many characters.");
+
+    } else {
+
+      loadTweets();
+
+    }
+
+    
+
   });
 });
