@@ -1,9 +1,10 @@
 /* Global Styles */
 
-:root, body {
+:root,
+body {
   --cream: hsl(37, 27%, 94%);
   --mainColor: #7768ca;
-  --hoverColor: rgb(154, 171, 209); 
+  --hoverColor: rgb(154, 171, 209);
   --red: #f04141;
   --offBlack: #545149;
   --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
@@ -11,8 +12,9 @@
 
 /* Hide body by default - fadeIn on page load */
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   letter-spacing: -1px;
 }
 
@@ -25,6 +27,16 @@ body, footer {
   display: none;
 }
 
+#follower {
+  border: 1px solid var(--offBlack);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 999;
+  transition: 300ms ease;
+}
+
 button {
   padding: 3px 30px;
   border-radius: 40px;
@@ -35,7 +47,7 @@ button:hover {
   cursor: pointer;
 }
 
-button:hover .label{
+button:hover .label {
   color: var(--cream);
 }
 
@@ -43,7 +55,7 @@ button:hover .label{
   display: none;
 }
 
-.backtotop {
+#backtotop {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,13 +76,16 @@ button:hover .label{
   bottom: 0;
   right: 0;
   box-shadow: var(--shadow);
+  z-index: 999;
+  transition: 300ms ease;
 }
 
-.backtotop:hover {
+#backtotop:hover {
   background-color: var(--hoverColor);
   color: var(--cream);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
