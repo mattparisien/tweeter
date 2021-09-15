@@ -1,6 +1,6 @@
 //Button Animations File
 
-$(() => {
+$(document).ready( function() {
   
 // Helper function: scrolls to tweet form while taking nav offset into consideration
 /**
@@ -70,7 +70,8 @@ $backToTop.on("click", function (e) {
 
 $(window).on("scroll", function () {
   if ($(this).scrollTop() >= 1200) {
-    $($backToTop).fadeIn(200);
+    console.log('in here!')
+  
   } else {
     $($backToTop).fadeOut(200);
   }
@@ -81,6 +82,10 @@ $(window).on("scroll", function () {
     $($navLink).fadeIn(200);
   }
 });
+
+$(document).ready(function() {
+  
+})
 
 
 })
