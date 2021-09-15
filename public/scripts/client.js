@@ -1,4 +1,5 @@
-$(() => {
+$( () => {
+
   $("body, footer").fadeIn(200);
   /**
    *
@@ -11,9 +12,7 @@ $(() => {
     <article class="tweet-item">
           <header class="user-info">
             <div class="header-left">
-              <img src="${
-                data.user.avatars
-              }" style="width: 60px; height: 60px;">
+              <img src="${data.user.avatars}" style="width: 60px; height: 60px;">
               <h4>${data.user.name}</h4>
             </div>
             <h4 class="handle">${data.user.handle}</h4>
@@ -58,34 +57,43 @@ $(() => {
   //Submit form data via ajax post request --> get tweets once info has been successfully posted
   $("#compose-form").submit(function (e) {
     e.preventDefault();
-
+    
     const $textArea = $("#tweet-text");
     const $formError = $("#compose-form .form-error")[0];
     let $validatedForm = validateForm($textArea);
 
     if ($validatedForm.hasError) {
+      
+      e.preventDefault();
       $($formError).text(`${$validatedForm.errorMsg}`).slideDown();
       $($textArea).addClass("invalid-field");
+
     } else {
+
       const $loader = $("#loader");
       const $formData = $(this).serialize();
       const $button = $(this).find("button")[0];
+
+      $("#loader").show();
+
+
+      if ($("#loader").is(":visible")) {
+        $($button).hide();
+
+      } 
+
+      
       $.post("/tweets/", $formData, function (data, status) {
         loadTweets();
       });
-    }
-
-    // $("#loader").show();
-
-    if ($("#loader").is(":visible")) {
-      $($button).hide();
+      
     }
   });
 
   //Helper function respomsible for validating tweet form field
   /**
-   *
-   * @param {*} formField The form's textarea or input field
+   * 
+   * @param {*} formField The form's textarea or input field 
    * @returns An object specifying whether the form contains an error, and an error message specifying the error message to be declared
    */
   const validateForm = function (formField) {
@@ -104,6 +112,8 @@ $(() => {
 
     $($textArea).val("");
     $($counter).val("140");
+    $("#tweet-text").removeClass("invalid-field");
+    $(".form-error").hide();
   };
 
   //Function responsible for loading tweets from server
@@ -113,9 +123,11 @@ $(() => {
       resetForm();
       $("#loader").hide();
       $("#submit").show();
+
     });
   };
 
   //Initially load tweets
   loadTweets();
+  
 });
