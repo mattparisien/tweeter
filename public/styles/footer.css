@@ -12,17 +12,28 @@
 }
 
 .global-footer .content {
+  font-size: 15px;
   z-index: 999;
-  width: 400px;
-  height: 50vmax;
+  width: 100%;
+  height: 100%;
   position: sticky;
-  margin: 5vw;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
-  margin: 0 auto;
-  
+}
+
+.global-footer .content .credits {
+  border: 1px solid var(--cream);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+  line-height: 1px;
+}
+
+.global-footer .content a {
+  white-space: nowrap;
+  font-weight: 800;
 }
 
 .waves-container {
@@ -30,39 +41,6 @@
   width: 250%;
   position: absolute;
   top: 0;
-  
-}
-
-.global-footer {
-  background-image: url(#waves);
-}
-
-.global-footer form {
-  font-size: 20px;
-}
-
-.global-footer form input {
-  width: 300px;
-  border-radius: 5px;
-  border: 0px;
-  padding: 10px;
-}
-
-.global-footer form input:focus {
-  outline: none;
-}
-
-.global-footer button {
-  color: var(--cream);
-  background: transparent;
-  padding: 10px;
-  border-radius: 40px;
-  border: 0.5px solid var(--cream);
-  transition: 300ms ease;
-  font-weight: 200;
-  overflow: hidden;
-  position: relative;
-  margin-left: 10px;
 }
 
 .global-footer button:hover {
