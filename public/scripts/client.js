@@ -1,4 +1,5 @@
-$( () => {
+$(() => {
+  $("body, footer").fadeIn(200);
   /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
@@ -10,7 +11,9 @@ $( () => {
     <article class="tweet-item">
           <header class="user-info">
             <div class="header-left">
-              <img src="${data.user.avatars}" style="width: 60px; height: 60px;">
+              <img src="${
+                data.user.avatars
+              }" style="width: 60px; height: 60px;">
               <h4>${data.user.name}</h4>
             </div>
             <h4 class="handle">${data.user.handle}</h4>
@@ -55,28 +58,34 @@ $( () => {
   //Submit form data via ajax post request --> get tweets once info has been successfully posted
   $("#compose-form").submit(function (e) {
     e.preventDefault();
-    
-    const $loader = $("#loader");
-    const $formData = $(this).serialize();
-    const $button = $(this).find("button")[0];
 
-    $("#loader").show();
+    const $textArea = $("#tweet-text");
+    const $formError = $("#compose-form .form-error")[0];
+    let $validatedForm = validateForm($textArea);
 
+    if ($validatedForm.hasError) {
+      $($formError).text(`${$validatedForm.errorMsg}`).slideDown();
+      $($textArea).addClass("invalid-field");
+    } else {
+      const $loader = $("#loader");
+      const $formData = $(this).serialize();
+      const $button = $(this).find("button")[0];
+      $.post("/tweets/", $formData, function (data, status) {
+        loadTweets();
+      });
+    }
+
+    // $("#loader").show();
 
     if ($("#loader").is(":visible")) {
       $($button).hide();
-    } 
-
-
-    $.post("/tweets/", $formData, function (data, status) {
-      loadTweets();
-    });
+    }
   });
 
   //Helper function respomsible for validating tweet form field
   /**
-   * 
-   * @param {*} formField The form's textarea or input field 
+   *
+   * @param {*} formField The form's textarea or input field
    * @returns An object specifying whether the form contains an error, and an error message specifying the error message to be declared
    */
   const validateForm = function (formField) {
@@ -109,38 +118,4 @@ $( () => {
 
   //Initially load tweets
   loadTweets();
-  $("body, footer").fadeIn(200);
-  
-
-  //Event handler checks for form submissions errors, if none reload tweets
-  $("#submit").on("click", function (e) {
-    const $textArea = $("#tweet-text");
-    const $formError = $("#compose-form .form-error")[0];
-    let $validatedForm = validateForm($textArea);
-
-    if ($validatedForm.hasError) {
-      console.log('error!')
-      e.preventDefault();
-      $($formError).text(`${$validatedForm.errorMsg}`).slideDown();
-      $($textArea).addClass("invalid-field");
-
-      $("#submit").on("click", function () {
-        console.log('error2')
-        $validatedForm = validateForm($textArea);
-        if (!$validatedForm.hasError) {
-          
-          $($formError).hide();
-          $($textArea).removeClass("invalid-field");
-          loadTweets();
-        }
-      });
-    } else {
-
-      loadTweets();
-    }
-
-
-    
-
-  });
 });
