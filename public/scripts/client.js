@@ -110,10 +110,11 @@ $( () => {
     const $textArea = $("#compose-form textarea");
     const $counter = $("#compose-form").find("#counter");
 
-    $($textArea).val("");
+    $($($textArea).val("")).focus();
     $($counter).val("140");
     $("#tweet-text").removeClass("invalid-field");
     $(".form-error").hide();
+
   };
 
   //Function responsible for loading tweets from server
