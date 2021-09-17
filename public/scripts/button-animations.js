@@ -23,7 +23,12 @@ $(document).ready(function () {
 
   //Nav arrow link: On click event triggers a smooth scroll to tweet form
   const $button = $("#scroll-to-form");
-  $button.on("click", function (e) {
+  const $backToTweeting = $("#backtotop");
+  $($button).on("click", function (e) {
+    scrollToForm(e);
+  });
+
+  $($backToTweeting).on("click", function (e) {
     scrollToForm(e);
   });
 
