@@ -10,7 +10,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("#new-tweet").slideDown();
 
-    setTimeout(() => {
+    
       $("html, body").animate(
         {
           scrollTop: $("#compose-form").offset().top - 300, //Offset top by 300px to prevent nav covering form
@@ -18,7 +18,7 @@ $(document).ready(function () {
         1500
       );
       $("#compose-form textarea").focus();
-    }, 400);
+    
   };
 
   //Nav arrow link: On click event triggers a smooth scroll to tweet form
