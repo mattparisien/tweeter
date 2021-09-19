@@ -30,6 +30,13 @@ This project by [Matthew Parisien](https://github.com/mattparisien) is created a
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+- MD5
+
+## Dev Dependencies
+
+- Nodemon
 
 ## Directory Structure
 
