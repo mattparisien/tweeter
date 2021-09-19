@@ -1,7 +1,7 @@
 /* Global Styles */
 
-:root,
-body {
+#root {
+  
   --cream: hsl(37, 27%, 94%);
   --mainColor: #7768ca;
   --hoverColor: rgb(154, 171, 209);
@@ -9,8 +9,6 @@ body {
   --offBlack: #545149;
   --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
 }
-
-/* Hide body by default - fadeIn on page load */
 
 h1,
 h2,
@@ -23,18 +21,21 @@ h1 {
 }
 
 /* Hide by default, reveal on load */
-body, footer {
+#root,
+footer {
   display: none;
 }
 
 #follower {
-  border: 1px solid var(--offBlack);
   border-radius: 50%;
   height: 100px;
   width: 100px;
   position: absolute;
   z-index: 999;
   transition: 300ms ease;
+  background-color: var(--mainColor);
+  opacity: 0.3;
+  border: 1px solid black;
 }
 
 button {
@@ -78,6 +79,11 @@ button:hover .label {
   box-shadow: var(--shadow);
   z-index: 999;
   transition: 300ms ease;
+}
+
+article body {
+  height: 100%;
+  width: 100%;
 }
 
 #backtotop:hover {

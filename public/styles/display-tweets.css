@@ -1,6 +1,6 @@
 .display-tweets-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   width: 100%;
 }
 

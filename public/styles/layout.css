@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,11 +16,10 @@ html {
 /*
  * Global layout stuff
  */
-
-body {
+#root {
   color: #545149;
   background-color: var(--cream);
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   overflow-x: hidden;
@@ -32,7 +32,7 @@ main {
 
 /* Styles applying to screen widths above 1024px */
 .layout-shifter {
-  margin: 0  auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,6 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
-
   .layout-shifter {
     flex-direction: column;
     width: 100%;
@@ -62,6 +61,6 @@ main {
   }
 
   main {
-  width: 90%;
+    width: 90%;
   }
 }

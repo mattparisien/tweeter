@@ -12,7 +12,7 @@ nav {
 .link-logo {
   text-decoration: none;
   color: white;
-  font-family: "Bungee"
+  font-family: "Bungee";
 }
 
 nav .link-logo .rotate {
@@ -34,9 +34,8 @@ nav .link-logo .rotate {
   justify-content: space-between;
   color: var(--cream);
   padding: 0;
-  padding: 0 1em;
+  padding: 0 1.5em;
 }
-
 
 .nav-right h5 {
   margin: 0;
@@ -81,13 +80,12 @@ nav .link-logo .rotate {
 
 @keyframes bounceArrow {
   0% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
   100% {
     transform: translateY(10px);
   }
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -96,7 +94,6 @@ nav .link-logo .rotate {
     transform: rotate(360deg);
   }
 }
-
 @-webkit-keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -105,7 +102,6 @@ nav .link-logo .rotate {
     transform: rotate(360deg);
   }
 }
-
 @-moz-keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -114,7 +110,6 @@ nav .link-logo .rotate {
     transform: rotate(360deg);
   }
 }
-
 @-o-keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -123,7 +118,6 @@ nav .link-logo .rotate {
     transform: rotate(360deg);
   }
 }
-
 @-ms-keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -132,7 +126,6 @@ nav .link-logo .rotate {
     transform: rotate(360deg);
   }
 }
-
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: var(--cream);

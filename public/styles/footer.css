@@ -13,12 +13,12 @@
 
 .global-footer .content {
   font-size: 15px;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   height: 100%;
   position: sticky;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
 }
