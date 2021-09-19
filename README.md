@@ -18,7 +18,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Directory Structure
 
-**[Public](https://github.com/mattparisien/tweeter/tree/master/public)** 
+### **[Public](https://github.com/mattparisien/tweeter/tree/master/public)** 
 - Contains files made publicly accessible in the application
 - Includes the assets folder, which contains images/videos and other media used in the app
 - **[Scripts](https://github.com/mattparisien/tweeter/tree/master/public/scripts)**
@@ -27,4 +27,9 @@ This repository is the starter code for the project: Students will fork and clon
     - Contains all CSS files used in the project
 - **[Vendor](https://github.com/mattparisien/tweeter/tree/master/public/vendor)**
     - Stores specific third party code.  
+
+### **[Server](https://github.com/mattparisien/tweeter/tree/master/server)**
+- Contains all server-side logic in the application.
+
+## File Description 
     
