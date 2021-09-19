@@ -32,4 +32,11 @@ This repository is the starter code for the project: Students will fork and clon
 - Contains all server-side logic in the application.
 
 ## File Description 
+### **[client.js](https://github.com/mattparisien/tweeter/tree/master/public)**
+- Contains all of the client-side logic for the application.
+- Contains the following functions: 
+    - *loadTweets*: submits a GET request to the /tweets/ route to retrieve an array of posted tweets. This function also resets the form and hides the l        loader, since it is called every time a post request completes.
+    - *createTweetElement*: renders HTML markup for a new tweet item. The function dynamically inserts user input into the markup using template literals.        Takes tweet data as a parameter.
+    - *renderTweets*: this function accepts an array of tweets as a parameter. It loops through the array and prepends each array item (each posted tweet) to the HTML container which holds them. 
+    - *  
     
