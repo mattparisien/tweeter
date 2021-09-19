@@ -51,3 +51,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ### **[composer-char-counter.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/composer-char-counter.js)**
 - in charge of dynamically updating the counter as the user writes a tweet. The file listens for the user's input using the input event and decreases/adds to the counter, also adding/removing CSS classes based on the input's state.
+
+### **[nav_scrolled.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/nav-scrolled.js)**
+- changes the navigation's background color on scroll from transparent to solid.
