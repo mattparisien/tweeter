@@ -7,24 +7,12 @@ nav {
   box-sizing: border-box;
   z-index: 998;
   transition: 300ms ease;
-}
 
-.link-logo {
-  text-decoration: none;
-  color: white;
-  font-family: "Bungee"
-}
-
-nav .link-logo .rotate {
-  text-align: center;
-  display: inline-block;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  animation: rotate 2s infinite linear;
-  width: 25px;
-  height: 25px;
+  .link-logo {
+    text-decoration: none;
+    color: white;
+    font-family: "Bungee";
+  }
 }
 
 .nav-inner-container {
@@ -37,51 +25,51 @@ nav .link-logo .rotate {
   padding: 0 1em;
 }
 
+.nav-right {
+  h5 {
+    margin: 0;
+  }
 
-.nav-right h5 {
-  margin: 0;
-}
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--cream);
+    transition: 300ms ease;
+  }
 
-.nav-right a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--cream);
-  transition: 300ms ease;
-}
+  a i {
+    animation: bounceArrow 1s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
 
-.nav-right a i {
-  animation: bounceArrow 1s ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-.nav-right a:hover {
-  color: var(--mainColor);
-  transition: 300ms ease;
+  a:hover {
+    color: var(--mainColor);
+    transition: 300ms ease;
+  }
 }
 
 .isScrolled {
   background-color: var(--cream);
   transition: 300ms ease;
   border-bottom: 1px solid black;
-}
 
-.isScrolled .nav-inner-container,
-.isScrolled .link-logo span,
-.isScrolled .nav-right a {
-  color: var(--mainColor);
-}
-
-.isScrolled .nav-right a:hover {
-  color: var(--hoverColor);
+  .nav-inner-container,
+  .link-logo span,
+  .nav-right a {
+    color: var(--mainColor);
+  }
+  .nav-right a:hover {
+    color: var(--hoverColor);
+  }
 }
 
 @keyframes bounceArrow {
   0% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
   100% {
     transform: translateY(10px);
@@ -139,7 +127,8 @@ nav .link-logo .rotate {
     border-bottom: 1px solid black;
   }
 
-  nav h1, nav .nav-right a {
+  nav h1,
+  nav .nav-right a {
     color: var(--mainColor);
   }
 }
