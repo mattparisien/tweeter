@@ -33,7 +33,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## File Description 
 
-### **[button-animations.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/client.js)**
+### **[button-animations.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/button-animations.js)**
 - Contains all jQuery logic for animating various buttons & their states.
 - Contains the following functions: 
     - *scrollToForm*: accepts an event object as a parameter. This function is responsible for smooth scrolling to the "Compose a New Tweet" block. It is called when various button are clicked (including the "Create a new tweet" button in the nav, and the "back to tweeting" button). The function first prevents the button's default behaviour to prevent a page refresh, slides down the compose a new tweet block, and then animates the body to the top of the page, where the block is located.
@@ -49,4 +49,5 @@ This repository is the starter code for the project: Students will fork and clon
     - *validateForm*: takes in a DOM form field as a parameter. The function checks for input field errors, such as an empty input field, or a field which contains over 140 characters. It returns an object with the key of "error", whose value specifies whether the input field contains an error or not, and "errorMsg", which will define the error in the form of a string.
     - *resetForm*: this function is in charge of resetting the form once the post request has been successfully submitted. It hides added classes which turn various elements to red, clears the text area and resets the counter to 140. It also refocuses the text area so the user can create another tweet easily.
 
-    
+### **[composer-char-counter.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/composer-char-counter.js)**
+- in charge of dynamically updating the counter as the user writes a tweet. The file listens for the user's input using the input event and decreases/adds to the counter, also adding/removing CSS classes based on the input's state.
