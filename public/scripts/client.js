@@ -1,6 +1,6 @@
 $( () => {
 
-  $("body, footer").fadeIn(200);
+  $("#root, footer").fadeIn(200);
   /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
@@ -17,7 +17,9 @@ $( () => {
             </div>
             <h4 class="handle">${data.user.handle}</h4>
           </header>
-          <p class="tweet"> ${data.content.text} </p>
+          <body>
+            <p class="tweet"> ${data.content.text} </p>
+          </body>
           <footer class="tweet-details">
             <p> ${timeago.format(data.created_at)}</p>
             <ul>
@@ -50,7 +52,7 @@ $( () => {
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
-      $(".display-tweets-container").append(newTweet);
+      $(".display-tweets-container").prepend(newTweet);
     });
   };
 
