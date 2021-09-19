@@ -37,6 +37,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Contains all jQuery logic for animating various buttons & their states.
 - Contains the following functions: 
     - *scrollToForm*: accepts an event object as a parameter. This function is responsible for smooth scrolling to the "Compose a New Tweet" block. It is called when various button are clicked (including the "Create a new tweet" button in the nav, and the "back to tweeting" button). The function first prevents the button's default behaviour to prevent a page refresh, slides down the compose a new tweet block, and then animates the body to the top of the page, where the block is located.
+    - *animateHoverState*: animates the background of the "Tweet" button on hover.
+    - *revealBackToTop*: reveals the "Back to Tweeting" button which stays fixed in the bottom right of the window as the user scrolls past 650px from the top. The function listens for scrolling using the scroll event, and uses a conditional statement to check if the user scrolled past 650px. If so, the button in the bottom right is revealed and the tweet button in the navigation is hidden. As the user scrolls back up, the reverse happens.
 
 ### **[client.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/client.js)**
 - Contains all of the client-side logic for the application.
