@@ -132,7 +132,8 @@ nav .link-logo .rotate {
     border-bottom: 1px solid black;
   }
 
-  nav h1, nav .nav-right a {
+  nav h1,
+  nav .nav-right a {
     color: var(--mainColor);
   }
 }
