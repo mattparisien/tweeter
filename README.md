@@ -33,6 +33,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## File Description 
 
+### **[index.html](https://github.com/mattparisien/tweeter/blob/master/public/index.html)**
+- contains all of the HTML markup for the application. All external stylesheets and scripts are linked in the head tag.
+
 ### **[button-animations.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/button-animations.js)**
 - Contains all jQuery logic for animating various buttons & their states.
 - Contains the following functions: 
@@ -54,3 +57,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ### **[nav_scrolled.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/nav-scrolled.js)**
 - adds and removes CSS classes to the navigation depending on the user's scroll position & the width of the viewport.
+
+### **[timeago.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/timeago.js)**
+- keeps track of each tweet's posted time using the timeago library.
