@@ -1,8 +1,8 @@
 .global-header {
   height: 400px;
   width: 100%;
-  background-image: linear-gradient(to top left, #9b94c4, #f3b162, #f3b1b2, #4aa0b1);
-  background-size: 350%;
+  background: linear-gradient(to top left, #f0bebc, #eb8e88, #f1af7a, #eade8d, #b9ddb3, #aacede, #cbcde9);
+  background-size: 400%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,8 @@
   animation: animateHeaderBg 8s ease-in-out infinite;
   animation-direction: alternate-reverse;
 }
+
+
 
 .global-header h1 {
   text-align: center;

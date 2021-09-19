@@ -70,6 +70,7 @@
   text-decoration: none;
   color: var(--offBlack);
   transition: 300ms ease;
+  margin-left: 0.3em;
 }
 
 .tweet-details ul a:hover {
