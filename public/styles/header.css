@@ -3,13 +3,13 @@
   width: 100%;
   background: linear-gradient(
     to top left,
-    #f0bebc,
+    #f0e87f,
+    #e9c93a,
+    #e74413,
     #eb8e88,
-    #f1af7a,
-    #eade8d,
-    #b9ddb3,
+    #e993dd,
     #aacede,
-    #cbcde9
+    #9ea2dd
   );
   background-size: 400%;
   display: flex;
