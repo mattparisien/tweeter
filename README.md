@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Directory Structure
+
+**[Public](https://github.com/mattparisien/tweeter/tree/master/public)** 
+- Contains files made publicly accessible in the application
+- Includes the assets folder, which contains images/videos and other media used in the app
+  - **[Styles]**(https://github.com/mattparisien/tweeter/tree/master/public/styles)
+    - Contains all CSS files
