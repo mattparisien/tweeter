@@ -1,15 +1,15 @@
 /* Global Styles */
-
-#root {
-  
-  --cream: rgb(244, 241, 236);
-  --mainColor: #7e70cf;
+:root,
+body {
+  --cream: hsl(37, 27%, 94%);
+  --mainColor: #7768ca;
   --hoverColor: rgb(154, 171, 209);
   --red: #f04141;
   --offBlack: #545149;
-  --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%); 
+  --shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
 }
 
+/* Hide body by default - fadeIn on page load */
 h1,
 h2,
 h3 {
@@ -21,7 +21,7 @@ h1 {
 }
 
 /* Hide by default, reveal on load */
-#root,
+body,
 footer {
   display: none;
 }
@@ -79,11 +79,6 @@ button:hover .label {
   box-shadow: var(--shadow);
   z-index: 999;
   transition: 300ms ease;
-}
-
-article body {
-  height: 100%;
-  width: 100%;
 }
 
 #backtotop:hover {
