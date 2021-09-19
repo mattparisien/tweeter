@@ -79,6 +79,3 @@ This project by [Matthew Parisien](https://github.com/mattparisien) is created a
 
 ### **[nav_scrolled.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/nav-scrolled.js)**
 - adds and removes CSS classes to the navigation depending on the user's scroll position & the width of the viewport.
-
-### **[timeago.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/timeago.js)**
-- keeps track of each tweet's posted time using the timeago library.
