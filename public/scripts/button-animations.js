@@ -1,6 +1,5 @@
 //Button Animations File
-
-$(document).ready(function () {
+$(() => {
   // Helper function: scrolls to tweet form while taking nav offset into consideration
   /**
    *
@@ -9,16 +8,15 @@ $(document).ready(function () {
   const scrollToForm = function (e) {
     e.preventDefault();
     $("#new-tweet").slideDown();
-
-    
-      $("html, body").animate(
-        {
-          scrollTop: $("#compose-form").offset().top - 300, //Offset top by 300px to prevent nav covering form
-        },
-        1500
-      );
-      $("#compose-form textarea").focus();
-    
+      setTimeout(() => {
+        $("html, #root").animate(
+          {
+            scrollTop: $("#compose-form").offset().top - 300, //Offset top by 300px to prevent nav covering form
+          },
+          1500
+        );
+        $("#compose-form textarea").focus();  
+      }, 200);    
   };
 
   //Nav arrow link: On click event triggers a smooth scroll to tweet form
