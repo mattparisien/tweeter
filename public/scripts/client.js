@@ -4,13 +4,14 @@ $(() => {
   /**
    * 
    * @param {*} str String to be escaped
-   * @returns an HTML element 
+   * @returns plain HTML text
    */
   const escape = function(str) {
     const newElement = document.createElement("p");
     newElement.appendChild(document.createTextNode(str));
     return newElement.innerHTML;
   }
+
     /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
@@ -28,9 +29,7 @@ $(() => {
             </div>
             <h4 class="handle">${data.user.handle}</h4>
           </header>
-          
-          ${escape(data.content.text)}
-      
+          <p class="tweet"> ${escape(data.content.text)} </p>
           <footer class="tweet-details">
             <p> ${timeago.format(data.created_at)}</p>
             <ul>
