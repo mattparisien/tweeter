@@ -1,11 +1,21 @@
 $(() => {
   $("#root, footer").fadeIn(200);
+
   /**
+   * 
+   * @param {*} str String to be escaped
+   * @returns an HTML element 
+   */
+  const escape = function(str) {
+    const newElement = document.createElement("p");
+    newElement.appendChild(document.createTextNode(str));
+    return newElement.innerHTML;
+  }
+    /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
    * @returns HTML markup for displaying a new tweet
    */
-
   const createTweetElement = function(data) {
     const $tweetTemplate = `
     <article class="tweet-item">
@@ -14,13 +24,13 @@ $(() => {
               <img src="${
                 data.user.avatars
               }" style="width: 60px; height: 60px;">
-              <h4>${data.user.name}</h4>
+              <h4> ${data.user.name} </h4>
             </div>
             <h4 class="handle">${data.user.handle}</h4>
           </header>
-          <body>
-            <p class="tweet"> ${data.content.text} </p>
-          </body>
+          
+          ${escape(data.content.text)}
+      
           <footer class="tweet-details">
             <p> ${timeago.format(data.created_at)}</p>
             <ul>
