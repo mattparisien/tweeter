@@ -13,7 +13,7 @@ export function escape(str) {
 }
 
 /**
- * 
+ *
  * @param {*} formField the user's input field
  * @returns an object containing a key with a value specifying if an error has occured or not, and a key of errorMsg, which as a value specifies the error through the form of a string
  */
@@ -26,7 +26,7 @@ export function validateForm(formField) {
   return { hasError: false, errorMsg: null };
 }
 
-//Helper function respomsible for reset of form elements
+//Responsible for the resetting of form elements once post request has been successfully submitted from form
 export function resetForm() {
   const $textArea = $("#compose-form textarea");
   const $counter = $("#compose-form").find("#counter");
@@ -35,4 +35,23 @@ export function resetForm() {
   $($counter).val("140");
   $("#tweet-text").removeClass("invalid-field");
   $(".form-error").hide();
+}
+
+// Scrolls to tweet form while taking nav offset into consideration
+/**
+ *
+ * @param {*} button Button linking to form
+ */
+export function scrollToForm(e) {
+  e.preventDefault();
+  $("#new-tweet").slideDown();
+  setTimeout(() => {
+    $("html, #root").animate(
+      {
+        scrollTop: $("#compose-form").offset().top - 300, //Offset top by 300px to prevent nav covering form
+      },
+      1500
+    );
+    $("#compose-form textarea").focus();
+  }, 200);
 }
