@@ -12,12 +12,12 @@
   justify-content: space-between;
   border-radius: 10px;
   transition: 300ms ease;
-  border: 1px solid var(--offBlack);
+  border: 1px solid #545149;
   margin: 50px 0px;
 }
 
 .tweet-item:hover {
-  box-shadow: var(--shadow);
+  box-shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
 }
 
 .tweet-item .user-info {
@@ -50,7 +50,7 @@
 }
 
 .tweet-details {
-  border-top: 3px solid var(--offBlack);
+  border-top: 3px solid #545149;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -68,13 +68,13 @@
 
 .tweet-details ul a {
   text-decoration: none;
-  color: var(--offBlack);
+  color: #545149;
   transition: 300ms ease;
   margin-left: 0.3em;
 }
 
 .tweet-details ul a:hover {
-  color: var(--mainColor);
+  color: #7768ca;
 }
 
 .tweet-details ul li {

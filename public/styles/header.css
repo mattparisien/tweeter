@@ -1,15 +1,8 @@
 .global-header {
   height: 400px;
   width: 100%;
-  background: linear-gradient(
-    to top left,
-    #e9c93a,
-    #eb8e88,
-    #e993dd,
-    #aacede,
-    #9ea2dd
-  );
-  background-size: 400%;
+  background-image: linear-gradient(to top left, #9b94c4, #f3b162, #f3b1b2, #4aa0b1);
+  background-size: 350%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +16,7 @@
 .global-header h1 {
   text-align: center;
   margin: 0 2em;
-  color: var(--cream);
+  color: #f4f1ec;
   z-index: 1;
 }
 

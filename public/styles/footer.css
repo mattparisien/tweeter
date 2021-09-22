@@ -2,7 +2,7 @@
   height: 60vmax;
   max-height: 600px;
   margin-top: 40px;
-  color: var(--cream);
+  color: #f4f1ec;
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
 }
 
 .global-footer .content .credits {
-  border: 1px solid var(--cream);
+  border: 1px solid #f4f1ec;
   border-radius: 10px;
   padding: 1em;
   margin: 1em;
@@ -44,11 +44,11 @@
 }
 
 .global-footer button:hover {
-  background-color: var(--cream);
+  background-color: #f4f1ec;
 }
 
 .global-footer button:hover .label {
-  color: var(--mainColor);
+  color: #7768ca;
 }
 
 .global-footer button .label {
@@ -63,7 +63,7 @@
   position: absolute;
   bottom: -50px;
   right: 0;
-  background-color: var(--mainColor);
+  background-color: #7768ca;
   border-radius: 50%;
   z-index: 1;
   display: block;

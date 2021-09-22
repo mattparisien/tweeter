@@ -1,6 +1,6 @@
 #new-tweet {
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.2);
   padding: 2em;
   margin: 3em 0;
   display: none;
@@ -18,7 +18,7 @@
 
 .new-tweet form textarea {
   border: 0px;
-  border-bottom: 3px solid var(--offBlack);
+  border-bottom: 3px solid #545149;
   background: transparent;
   line-height: 35px;
   resize: none;
@@ -30,14 +30,14 @@
 
 #compose-form .form-error {
   font-size: 15px;
-  color: var(--red);
+  color: #f04141;
   margin-top: 1em;
   font-weight: 600;
   display: none;
 }
 
 .invalid-field {
-  border-bottom: 3px solid var(--red) !important;
+  border-bottom: 3px solid #f04141 !important;
 }
 
 .tweet-form-controls {
@@ -47,10 +47,10 @@
 }
 
 .tweet-form-controls button {
-  color: var(--mainColor);
+  color: #7768ca;
   padding: 3px 30px;
   border-radius: 40px;
-  border: 0.5px solid var(--mainColor);
+  border: 0.5px solid #7768ca;
   transition: 300ms ease;
   font-weight: 200;
   overflow: hidden;
@@ -70,7 +70,7 @@
   position: absolute;
   bottom: -50px;
   right: 0;
-  background-color: var(--mainColor);
+  background-color: #7768ca;
   border-radius: 50%;
   z-index: 1;
   display: block;
@@ -93,7 +93,7 @@
 }
 
 .charLimitExceeded {
-  color: var(--red);
+  color: #f04141;
 }
 
 /* Tranform button circle in */

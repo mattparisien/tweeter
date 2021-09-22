@@ -1,8 +1,15 @@
+$cream: hsl(37, 27%, 94%);
+$mainColor: #7768ca;
+$hoverColor: rgb(154, 171, 209);
+$red: #f04141;
+$offBlack: #545149;
+$shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
+
 .global-footer {
   height: 60vmax;
   max-height: 600px;
   margin-top: 40px;
-  color: var(--cream);
+  color: $cream;
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +31,7 @@
 }
 
 .global-footer .content .credits {
-  border: 1px solid var(--cream);
+  border: 1px solid $cream;
   border-radius: 10px;
   padding: 1em;
   margin: 1em;
@@ -44,11 +51,11 @@
 }
 
 .global-footer button:hover {
-  background-color: var(--cream);
+  background-color: $cream;
 }
 
 .global-footer button:hover .label {
-  color: var(--mainColor);
+  color: $mainColor;
 }
 
 .global-footer button .label {
@@ -63,7 +70,7 @@
   position: absolute;
   bottom: -50px;
   right: 0;
-  background-color: var(--mainColor);
+  background-color: $mainColor;
   border-radius: 50%;
   z-index: 1;
   display: block;

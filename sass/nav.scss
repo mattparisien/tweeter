@@ -1,3 +1,10 @@
+$cream: hsl(37, 27%, 94%);
+$mainColor: #7768ca;
+$hoverColor: rgb(154, 171, 209);
+$red: #f04141;
+$offBlack: #545149;
+$shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
+
 nav {
   height: 120px;
   position: fixed;
@@ -20,7 +27,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--cream);
+  color: $cream;
   padding: 0;
   padding: 0 1em;
 }
@@ -36,7 +43,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: var(--cream);
+    color: $cream;
     transition: 300ms ease;
   }
 
@@ -47,23 +54,23 @@ nav {
   }
 
   a:hover {
-    color: var(--mainColor);
+    color: $mainColor;
     transition: 300ms ease;
   }
 }
 
 .isScrolled {
-  background-color: var(--cream);
+  background-color: $cream;
   transition: 300ms ease;
   border-bottom: 1px solid black;
 
   .nav-inner-container,
   .link-logo span,
   .nav-right a {
-    color: var(--mainColor);
+    color: $mainColor;
   }
   .nav-right a:hover {
-    color: var(--hoverColor);
+    color: $hoverColor;
   }
 }
 
@@ -123,12 +130,12 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: var(--cream);
+    background-color: $cream;
     border-bottom: 1px solid black;
   }
 
   nav h1,
   nav .nav-right a {
-    color: var(--mainColor);
+    color: $mainColor;
   }
 }

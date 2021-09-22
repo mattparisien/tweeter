@@ -16,9 +16,9 @@ html {
 /*
  * Global layout stuff
  */
-#root {
+body {
   color: #545149;
-  background-color: var(--cream);
+  background-color: #f4f1ec;
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;

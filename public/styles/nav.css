@@ -19,7 +19,7 @@ nav .link-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--cream);
+  color: #f4f1ec;
   padding: 0;
   padding: 0 1em;
 }
@@ -33,7 +33,7 @@ nav .link-logo {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: var(--cream);
+  color: #f4f1ec;
   transition: 300ms ease;
 }
 .nav-right a i {
@@ -42,22 +42,22 @@ nav .link-logo {
   animation-direction: alternate-reverse;
 }
 .nav-right a:hover {
-  color: var(--mainColor);
+  color: #7768ca;
   transition: 300ms ease;
 }
 
 .isScrolled {
-  background-color: var(--cream);
+  background-color: #f4f1ec;
   transition: 300ms ease;
   border-bottom: 1px solid black;
 }
 .isScrolled .nav-inner-container,
 .isScrolled .link-logo span,
 .isScrolled .nav-right a {
-  color: var(--mainColor);
+  color: #7768ca;
 }
 .isScrolled .nav-right a:hover {
-  color: var(--hoverColor);
+  color: #9aabd1;
 }
 
 @keyframes bounceArrow {
@@ -110,12 +110,12 @@ nav .link-logo {
 }
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: var(--cream);
+    background-color: #f4f1ec;
     border-bottom: 1px solid black;
   }
 
   nav h1,
 nav .nav-right a {
-    color: var(--mainColor);
+    color: #7768ca;
   }
 }

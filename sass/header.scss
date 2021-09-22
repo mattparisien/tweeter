@@ -1,3 +1,10 @@
+$cream: hsl(37, 27%, 94%);
+$mainColor: #7768ca;
+$hoverColor: rgb(154, 171, 209);
+$red: #f04141;
+$offBlack: #545149;
+$shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
+
 .global-header {
   height: 400px;
   width: 100%;
@@ -22,7 +29,7 @@
 .global-header h1 {
   text-align: center;
   margin: 0 2em;
-  color: var(--cream);
+  color: $cream;
   z-index: 1;
 }
 

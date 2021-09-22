@@ -1,3 +1,10 @@
+$cream: hsl(37, 27%, 94%);
+$mainColor: #7768ca;
+$hoverColor: rgb(154, 171, 209);
+$red: #f04141;
+$offBlack: #545149;
+$shadow: 0 1.5vw 3vw rgb(0 0 0 / 20%);
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -18,7 +25,7 @@ html {
 
 body {
   color: #545149;
-  background-color: var(--cream);
+  background-color: $cream;
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
