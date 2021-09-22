@@ -71,8 +71,14 @@ This project by [Matthew Parisien](https://github.com/mattparisien) is created a
     - *loadTweets*: submits a GET request to the /tweets/ route to retrieve an array of posted tweets. This function also resets the form and hides the l        loader, since it is called every time a post request completes.
     - *createTweetElement*: renders HTML markup for a new tweet item. The function dynamically inserts user input into the markup using template literals.        Takes tweet data as a parameter.
     - *renderTweets*: this function accepts an array of tweets as a parameter. It loops through the array and prepends each array item (each posted tweet) to the DOM container which holds them. 
+
+### **[helpers.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/helpers.js)**
+- Contains helpers functions for the client-side logic of the application.
+- Contains the following functions: 
     - *validateForm*: takes in a DOM form field as a parameter. The function checks for input field errors, such as an empty input field, or a field which contains over 140 characters. It returns an object with the key of "error", whose value specifies whether the input field contains an error or not, and "errorMsg", which will define the error in the form of a string.
     - *resetForm*: this function is in charge of resetting the form once the post request has been successfully submitted. It hides added classes which turn various elements to red, clears the text area and resets the counter to 140. It also refocuses the text area so the user can create another tweet easily.
+    - *scrollToForm*: is triggered inside of an event handler, and is responsible for scrolling the window up to the tweet form.
+    - *escape*: responsible for escaping potentially malicious input characters, which could either alter or destroy the application's code base.
 
 ### **[composer-char-counter.js](https://github.com/mattparisien/tweeter/blob/master/public/scripts/composer-char-counter.js)**
 - in charge of dynamically updating the counter as the user writes a tweet. The file listens for the user's input using the input event and decreases/adds to the counter, also adding/removing CSS classes based on the input's state.
