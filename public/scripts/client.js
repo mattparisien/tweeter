@@ -1,23 +1,14 @@
+import { escape, validateForm, resetForm } from "./helpers.js";
+
 $(() => {
   $("#root, footer").fadeIn(200);
 
   /**
-   * 
-   * @param {*} str String to be escaped
-   * @returns plain HTML text
-   */
-  const escape = function(str) {
-    const newElement = document.createElement("p");
-    newElement.appendChild(document.createTextNode(str));
-    return newElement.innerHTML;
-  }
-
-    /**
    *
    * @param {*} data An object containing user and content data about a new tweet post
    * @returns HTML markup for displaying a new tweet
    */
-  const createTweetElement = function(data) {
+  const createTweetElement = function (data) {
     const $tweetTemplate = `
     <article class="tweet-item">
           <header class="user-info">
@@ -59,7 +50,7 @@ $(() => {
    *
    * @param {*} tweets An array of objects containing tweet data.
    */
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
       $(".display-tweets-container").prepend(newTweet);
@@ -67,7 +58,7 @@ $(() => {
   };
 
   //Submit form data via ajax post request --> get tweets once info has been successfully posted
-  $("#compose-form").submit(function(e) {
+  $("#compose-form").submit(function (e) {
     e.preventDefault();
 
     const $textArea = $("#tweet-text");
@@ -89,41 +80,15 @@ $(() => {
         $($button).hide();
       }
 
-      $.post("/tweets/", $formData, function() {
+      $.post("/tweets/", $formData, function () {
         loadTweets();
       });
     }
   });
 
-  //Helper function respomsible for validating tweet form field
-  /**
-   *
-   * @param {*} formField The form's textarea or input field
-   * @returns An object specifying whether the form contains an error, and an error message specifying the error message to be declared
-   */
-  const validateForm = function(formField) {
-    if (!$(formField).val()) {
-      return { hasError: true, errorMsg: "Form fields cannot be empty." };
-    } else if ($(formField).val().length > 140) {
-      return { hasError: true, errorMsg: "Tweet has too many characters." };
-    }
-    return { hasError: false, errorMsg: null };
-  };
-
-  //Helper function respomsible for reset of form elements
-  const resetForm = function() {
-    const $textArea = $("#compose-form textarea");
-    const $counter = $("#compose-form").find("#counter");
-
-    $($($textArea).val("")).focus();
-    $($counter).val("140");
-    $("#tweet-text").removeClass("invalid-field");
-    $(".form-error").hide();
-  };
-
   //Function responsible for loading tweets from server
-  const loadTweets = function() {
-    $.get("/tweets/", function(data) {
+  const loadTweets = function () {
+    $.get("/tweets/", function (data) {
       renderTweets(data);
       resetForm();
       $("#loader").hide();
